@@ -124,7 +124,7 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-slate-50 flex items-center justify-center">
       <div className="w-full max-w-2xl p-6 bg-slate-900 border border-slate-800 rounded-xl shadow-lg">
         <h1 className="text-2xl font-semibold mb-4">
-          Paste HTML → Get Live URL (Cloudflare)
+          Paste HTML → Get Live URL Instantly
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
