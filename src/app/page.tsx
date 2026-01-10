@@ -158,7 +158,7 @@ export default function Home() {
             disabled={deploying}
             className="px-4 py-2 rounded bg-emerald-500 text-sm font-semibold disabled:bg-emerald-800"
           >
-            {deploying ? "Deploying..." : "Deploy to Cloudflare"}
+            {deploying ? "Deploying..." : "Deploy to WWWuniverse!"}
           </button>
         </form>
 
