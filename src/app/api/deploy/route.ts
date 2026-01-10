@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const CLOUDFLARE_WORKER_URL = "https://divine-term-31fc.gitver26.workers.dev";
-
+const CLOUDFLARE_WORKER_URL =
+  process.env.CLOUDFLARE_WORKER_URL ||
+  process.env.NEXT_PUBLIC_WORKER_URL ||
+  "https://www.instantwebai.shop";
 export async function POST(req: NextRequest) {
   try {
     const { slug, html } = await req.json();
