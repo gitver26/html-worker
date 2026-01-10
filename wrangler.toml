@@ -1,0 +1,47 @@
+# Cloudflare Workers Configuration
+# This file configures your Cloudflare Worker deployment
+
+name = "html-deployer"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Custom Domain Routes
+# Replace with your actual Cloudflare account ID and zone ID
+# Find these in your Cloudflare dashboard: https://dash.cloudflare.com/
+
+# Cloudflare account details
+account_id = "e0e9721d62f5a9eca8989249e8492a4d"
+zone_id = "bf779df68fc3df5d3589c92c464634b0"
+
+# Custom domain route - this makes your worker accessible at instantwebai.shop
+# Uncomment and configure after setting account_id and zone_id above
+routes = [
+  { pattern = "instantwebai.shop/*", zone_name = "instantwebai.shop" },
+  { pattern = "www.instantwebai.shop/*", zone_name = "instantwebai.shop" }
+]
+
+# Alternative: Use workers.dev subdomain for testing
+# workers_dev = true
+
+# Environment Variables
+# Add any environment variables your worker needs here
+# [vars]
+# ENVIRONMENT = "production"
+
+# KV Namespace Bindings (if you're using KV storage)
+# [[kv_namespaces]]
+# binding = "SITES"
+# id = "your-kv-namespace-id"
+
+# Development Configuration
+[env.development]
+name = "html-deployer-dev"
+# workers_dev = true
+
+# Production Configuration
+[env.production]
+name = "html-deployer"
+routes = [
+  { pattern = "instantwebai.shop/*", zone_name = "instantwebai.shop" },
+  { pattern = "www.instantwebai.shop/*", zone_name = "instantwebai.shop" }
+]
