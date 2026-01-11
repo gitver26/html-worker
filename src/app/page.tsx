@@ -124,7 +124,7 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-slate-50 flex items-center justify-center">
       <div className="w-full max-w-2xl p-6 bg-slate-900 border border-slate-800 rounded-xl shadow-lg">
         <h1 className="text-2xl font-semibold mb-4">
-          Paste HTML → Get Live URL Instantly
+          Paste HTML → Deploy in seconds, not minutes
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -158,7 +158,7 @@ export default function Home() {
             disabled={deploying}
             className="px-4 py-2 rounded bg-emerald-500 text-sm font-semibold disabled:bg-emerald-800"
           >
-            {deploying ? "Deploying..." : "Deploy to WWWuniverse!"}
+            {deploying ? "Deploying..." : "Deploy Now!"}
           </button>
         </form>
 
